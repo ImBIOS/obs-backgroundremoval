@@ -3,6 +3,9 @@
 A plugin for [OBS Studio](https://obsproject.com/) that allows you to replace the background in portrait images and video.
 
 - [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Usage](#usage)
+- [Settings](#settings)
 - [Building](#building)
   - [MacOSX](#mac-osx)
   - [Linux (Ubuntu, Arch)](#linux)
@@ -24,7 +27,7 @@ If you like this work, which is given to you completely free of charge, please c
 
 OBS Plugins forum: https://obsproject.com/forum/resources/background-removal-portrait-segmentation.1260/
 
-![](demo.gif)
+![Background removal demo](demo.gif)
 
 GPU support:
 * Currently on Windows we support DirectML, which should reduce CPU usage by 95% and effectively use the systems accelerators (GPUs if available).
@@ -39,6 +42,30 @@ The pretrained model weights used for portrait foreground segmentation are taken
 - https://github.com/PeterL1n/RobustVideoMatting
 
 Some more information about how I built it: https://www.morethantechnical.com/2021/04/15/obs-plugin-for-portrait-background-removal-with-onnx-sinet-model/
+
+## Requirements
+
+- OBS Studio v28+
+- A good CPU or GPU
+
+## Usage
+
+### Automatic install
+
+1. Download the OS specific plugin from the [Latest Releases](https://github.com/royshil/obs-backgroundremoval/releases/latest).
+2. Install the downloaded plugin.
+3. Open OBS Studio, and see if there is a `Background Removal` effect filter available on any source.
+
+### Manual install (Windows)
+
+1. Download the ZIP file (NOT the Source Code!) from the [Latest Releases](https://github.com/royshil/obs-backgroundremoval/releases/latest).
+2. Navigate to your OBS install folder (On Windows, this is located at `C:\Program Files\obs-studio`).
+3. Copy the contents of the ZIP file to the root of this folder, replacing any existing files (if you've installed the plugin before).
+4. Open OBS Studio, and see if there is a `Background Removal` effect filter available on any source.
+
+## Settings
+
+Please see [SETTINGS.md](SETTINGS.md) for setting descriptions.
 
 ## Building
 
